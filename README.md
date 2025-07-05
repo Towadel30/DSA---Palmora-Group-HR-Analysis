@@ -6,7 +6,9 @@ Project Overview :The Palmoria Group, a manufacturing company based in Nigeria, 
 ### Data Source 
 DSA Data Analysis Capstone Project 
 ### Tools Used
-Ms powerbi for Data Cleaning and Exploratory Data Analysis (EDA) 
+- Ms powerbi for Data Cleaning and Exploratory Data Analysis (EDA) 
+- DAX (Data Analysis Expressions)
+- Visual filters and slicers for interactivity
 - Opened the original dataset on Microsoft power bi [Download here](https://www.microsoft.com/en-us/power-platform/products/power-bi)
 
 ### Data Cleaning and Preparation
@@ -21,6 +23,12 @@ regions
 ### Exploratory Data Analysis
 Generally, there are two genders in the organization. However, some employees refused to disclose their gender. We will assign a generic gender status to these employees, some employees are without a salary because they are no longer with the company. We will need to take those employees out and some departments are indicated as “NULL”. These departments would also need to be taken out. 
 
+### File Contents
+- PalmoriaData.pbix – Power BI file with interactive dashboards.
+- Screenshots of visuals (optional, if you add them):
+- Gender Distribution Overview
+- Performance Rating Analysis
+- Salary Insights
 ### Data Analysis
 - Import the employee data into Power BI
 - Do a proper cleaning E.g
@@ -106,5 +114,30 @@ Measures
 
 
 ### Result Findings
+Gender Distribution
+Balanced Representation: The overall gender distribution is nearly equal — 49.15% Male, 46.62% Female, and 4.23% N/A (undisclosed).
 
+By Department & Location: Gender is fairly distributed across departments and cities (Abuja, Kaduna, and Lagos), indicating an inclusive workforce.
+
+Performance Ratings
+Majority Rated Average: Most employees received an "Average" rating, with fewer rated "Very Good" or "Very Poor".
+
+No Major Bias by Gender: Male and female employees received similar rating patterns, suggesting no visible gender bias in performance assessments.
+
+Salary Analysis
+Average Salary: The overall average salary across all employees is $73.7K.
+
+By Gender: While total salaries vary, average salaries are fairly balanced between male and female employees.
+
+Top-Paying Departments: Roles in Business Development, Marketing, and Product Management offer the highest average salaries.
+
+Location-Based Pay: Lagos has the highest average salary, followed by Kaduna, then Abuja.
+
+![image](https://github.com/user-attachments/assets/2a5462cf-6be4-4e2f-8729-4c116f3d0265)
+
+![image](https://github.com/user-attachments/assets/9a0df48b-4bef-450f-8ac1-099c69411430)
+
+![image](https://github.com/user-attachments/assets/7c7fba63-7887-4311-88f1-987326ee692f)
+
+![image](https://github.com/user-attachments/assets/987ed63a-356d-4cf2-aed6-ce0a3d4dfad8)
 
