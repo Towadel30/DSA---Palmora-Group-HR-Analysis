@@ -13,38 +13,91 @@ Ms powerbi for Data Cleaning and Exploratory Data Analysis (EDA)
 - Data loading and Inspection
 - Handling missing variables
 - Data Cleaning and formating
--  Analyse the company data and generate insights that the Palmoria management 
-team would need to address 
+-  Analyse the company data and generate insights that the Palmoria management team would need to address 
 - Visualised using appropriate charts 
-- Focus should be on gender-related issues within the organization and its 
+- Focus will be on gender-related issues within the organization and its 
 regions  
 
 ### Exploratory Data Analysis
 Generally, there are two genders in the organization. However, some employees refused to disclose their gender. We will assign a generic gender status to these employees, some employees are without a salary because they are no longer with the company. We will need to take those employees out and some departments are indicated as “NULL”. These departments would also need to be taken out. 
 
 ### Data Analysis
-- Turned my dataset to table to enable me work on it using Ctrl+T
+Import the employee data into Power BI.
+Do a proper cleaning E.g
+1. Remove employees without salaries and departments indicated as "NULL".
+2. Assign a generic gender status to employees who refused to disclose their gender.
 
-- Started cleaning by first using delimeter to get my main category and delete the splitted columns and irrelevant columns too
+1: Gender Distribution Analysis
+1. Create a bar chart:
+    - Axis: Region/Department
+    - Value: Count of Employees by Gender
+2. Use a slicer to filter by region/department.
+3. Visualize the overall gender distribution using a pie chart.
 
-- Removed duplicates by navigating our "arrow" to the "data tab" — Remove duplicates. Made sure to repeat the process until there was no more duplicates. 
+Visualization: 
+- Bar chart: "Gender Distribution by Region"
+- Pie chart: "Overall Gender Distribution"
 
-- Created a new column for revenue on our worksheet as stated on our question, Multiplied "actual price" by "rating count" to arrive at our revenue
+Measures
+- Gender Count = COUNT('Employee'[Gender])
+- Gender Percentage = DIVIDE(CALCULATE(COUNT('Employee'[Gender])), CALCULATE(COUNT('Employee'[Gender]), ALL('Employee'[Gender])))
+2: Ratings Insights Based on Gender
+1. Create a histogram/box plot:
+    - Axis: Rating
+    - Value: Count of Employees by Gender
+2. Use a slicer to filter by gender.
+3. Calculate the average rating by gender using a measure.
 
-- Created a new column products having a discount of 50% or more,=IF(Discount % >= 50, "Yes", "No
+Visualization:
+- Histogram: "Ratings Distribution by Gender"
+- Box plot: "Ratings Comparison by Gender"
 
-- Add calculated column: Price Bucket Excel formular=IF(Discounted Price < 200, "₹200", IF(Discounted Price <= 500, "₹200–₹500", "₹500")
+Measures
+- Average Rating by Gender = AVERAGE('Employee'[Rating])
+- Rating Count by Gender = COUNT('Employee'[Rating])
+3: Salary Structure and Gender Pay Gap Analysis
+1. Create a scatter plot:
+    - X-axis: Salary
+    - Y-axis: Gender
+2. Calculate the average salary by gender using a measure.
+3. Identify departments and regions with significant pay gaps.
 
-- Add calculated column:excel formular==IF(Discounted Percentage<=10%,"0-10%",IF(Discounted Percentage<=20%,"11-20%",IF(Discounted Percentage<=30%,"21-30%",IF(Discounted 
-Percentage<=40%,"31-40%",IF(Discounted Percentage<=50%,"41-50%",IF(Discounted Percentage<=60%,"51-60%",IF(Discounted Percentage<=70%,"61-70%",IF(Discounted Percentage<=80%,"71-80%",IF(Discounted Percentage<=90%,"81-90%","91-100%")))))))))
+Visualization:
+- Scatter plot: "Salary vs. Gender"
+- Bar chart: "Average Salary by Department and Region"
 
-- Created our pivot table by navigating our "arrow" to the to the "insert tab" — pivot table. Made sure our pivot is on a new worksheet and not an existing worksheet to ensure we have a clean pivot table
+Measures 
+- Average Salary by Gender = AVERAGE('Employee'[Salary])
+- Salary Count by Department and Region = COUNT('Employee'[Salary])
+4: Minimum Salary Requirement Analysis
+1. Create a histogram:
+    - Axis: Salary Band ($10,000 increments)
+    - Value: Count of Employees
+2. Use a slicer to filter by region.
+3. Calculate the number of employees below the minimum salary threshold.
 
-- Started answering the questions on our case study by creating the pivot tables as requested
+Visualization:
+- Histogram: "Salary Distribution by $10,000 Band"
+- Bar chart: "Employees Below Minimum Salary Threshold by Region"
 
+Measures
+- Employees Below Minimum Salary = COUNTX(FILTER('Employee', 'Employee'[Salary] < 90000), 'Employee'[Salary])
+5: Bonus Payment Calculation
+1. Create a measure to calculate the bonus amount based on performance ratings.
+2. Calculate the total amount to be paid to individual employees (salary + bonus).
+3. Create a bar chart to visualize the total amount to be paid out per region.
+
+Visualization:
+Bonus Payments
+- Bar chart: "Total Bonus Payout by Region"
+- Table: "Individual Employee Bonus Payments"
+
+Measures
+- Bonus Amount = IF('Employee'[Rating] > 3, 'Employee'[Salary] * 0.1, 0)
+- Total Amount to be Paid = 'Employee'[Salary] + 'Bonus Amount'
 - Created another sheet for Dashboard
 
-![image](https://github.com/user-attachments/assets/c8d1b0f7-6841-4c73-b410-d72ece6938bb)
+
 ### Result Findings
 1. Category by Average of Discount Percentage
 This chart shows the average discount percentage across different product categories.
