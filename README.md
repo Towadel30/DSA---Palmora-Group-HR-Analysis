@@ -22,12 +22,19 @@ regions
 Generally, there are two genders in the organization. However, some employees refused to disclose their gender. We will assign a generic gender status to these employees, some employees are without a salary because they are no longer with the company. We will need to take those employees out and some departments are indicated as “NULL”. These departments would also need to be taken out. 
 
 ### Data Analysis
-Import the employee data into Power BI.
-Do a proper cleaning E.g
-1. Remove employees without salaries and departments indicated as "NULL".
-2. Assign a generic gender status to employees who refused to disclose their gender.
-
-1: Gender Distribution Analysis
+- Import the employee data into Power BI
+- Do a proper cleaning E.g
+ 1. Remove employees without salaries and departments indicated as "NULL".
+ 2. Assign a generic gender status to employees who refused to disclose their gender (N/A).
+- Unpivot Column
+- Check column quality, profile and distribution
+- Use custom column to create a new column Department/Rating using Department&"/"&Rating
+- Import bonus mapping
+- Unpivot column
+- Use custom column to create a new column Department/Attribute using Department&"/"&Attribute
+- Merge employee data and bonus mapping and rename it has New
+- Create new column Total pay, Annual bonus and Salary band
+- Create visuals on canvas  
 1. Create a bar chart:
     - Axis: Region/Department
     - Value: Count of Employees by Gender
@@ -99,36 +106,5 @@ Measures
 
 
 ### Result Findings
-1. Category by Average of Discount Percentage
-This chart shows the average discount percentage across different product categories.
-Home Improvement has the highest average discount at 58%, followed by Computers & Accessories (54%), Health & Personal Care (53%), and Electronics (50%), Office Products (12%) and Toys & Games (0%) have the lowest or no discounts.
-The discount level varies significantly, which may affect consumer purchase behavior — higher discounts often drive more attention.
 
-2. Category by Product Name 
-This chart shows the number of products listed under each category
-Computers & Accessories and Home & Kitchen have the highest product counts (511 and 448 respectively).
-Categories like Car & Motorbike and Toys & Games only have 1 product each.
-This tells us which categories are most represented in the dataset — likely areas where Amazon has a broader inventory or focus.
 
-3. Category by Average Actual Price and Discounted Price (Right Chart)
-This line chart compares the average actual price vs. the discounted price per category.
-Electronics stand out with a sharp peak — high average actual price and significant discount.
-Other categories like Musical Instruments and Health & Personal Care also show notable price differences.
-Toys & Games and Office Products show almost no difference — likely due to low or no discounts, as shown earlier.
-The gap between actual and discounted prices reflects how much customers are saving — useful for pricing strategies.
-
-4. Category by Sum of Rating Count
-This chart shows the rating across different category and the higest is Electronics with 15,595,997
-
-5. Category by Sum of Revenue
-This chart shows the revenue across different category and the higest is Electronics with 96,936,506,025
-
-6. Discount Bucket by Average Rating
-This chart shows the average rating of the discount bucket and the higest 4.2 are within 0-10%, 21-30% and 91-100%
-
-7. Price Bucket by Sum of Product Name
-This chart shows the price bucket by sum of product name, ₹200	is 169, ₹200–₹500	is 351 while
-₹500	is 869 
-  
-8. Category by Maximum of Discount Percentage
-This chart shows the maximum discount percentage across different category and the higest is Computer Accesssories with 94%
