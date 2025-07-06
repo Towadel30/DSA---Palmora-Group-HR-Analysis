@@ -114,17 +114,17 @@ Measures
 
 
 ### Result Findings
-Gender Distribution
+- Gender Distribution
 Balanced Representation: The overall gender distribution is nearly equal — 49.15% Male, 46.62% Female, and 4.23% N/A (undisclosed).
 
 By Department & Location: Gender is fairly distributed across departments and cities (Abuja, Kaduna, and Lagos), indicating an inclusive workforce.
 
-Performance Ratings
+- Performance Ratings
 Majority Rated Average: Most employees received an "Average" rating, with fewer rated "Very Good" or "Very Poor".
 
 No Major Bias by Gender: Male and female employees received similar rating patterns, suggesting no visible gender bias in performance assessments.
 
-Salary Analysis
+- Salary Analysis
 Average Salary: The overall average salary across all employees is $73.7K.
 
 By Gender: While total salaries vary, average salaries are fairly balanced between male and female employees.
@@ -132,6 +132,29 @@ By Gender: While total salaries vary, average salaries are fairly balanced betwe
 Top-Paying Departments: Roles in Business Development, Marketing, and Product Management offer the highest average salaries.
 
 Location-Based Pay: Lagos has the highest average salary, followed by Kaduna, then Abuja.
+
+- Gender by Salary Band
+This horizontal bar chart shows the number of employees by salary band, broken down by gender.
+
+From the bars, the gender distribution is consistent across salary bands, with similar counts — likely implying minimal gender pay disparity within bands, but it’s unclear if male/female breakdown is visually separated (the chart might just show total count).
+
+- Employees Below Minimum Salary by Location
+This chart shows how many employees in each location earn below the minimum salary.
+
+Kaduna has the highest number, followed by Abuja, and Lagos has the fewest.
+
+This might highlight:
+
+Regional inequality in pay structure,
+
+Or cost-of-living adjustments not being factored evenly across regions.
+
+- Location Slicer
+At the bottom, there's a slicer to filter visuals by Location (Abuja, Kaduna, Lagos).
+
+This makes it easier to do comparative analysis per location.
+
+
 
 ![image](https://github.com/user-attachments/assets/2a5462cf-6be4-4e2f-8729-4c116f3d0265)
 
